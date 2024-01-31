@@ -15,7 +15,6 @@ for i in numbers:
 
 print(numbers)
 
-list = [1, 2, 3, 4, 5, 6, 7]
 # question 2
 # fibonacci sequence:   0     1     1     2 3 5 8 ....
 # num1  num2  num3
