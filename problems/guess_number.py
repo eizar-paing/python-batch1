@@ -7,13 +7,14 @@
 compnum = 50
 count = 0
 num = 0
-while num != compnum:
+while num != compnum:  # 50 != 50 => false
     num = int(input("guess number: "))
     count += 1
-    if num > compnum:
-        print("too high")
-    elif num < compnum:
-        print("too low")
-    else:
+    if num == compnum:  # should be first to break as soon as it gets correct number
         print("Well done")
+        break
+    elif num > compnum:
+        print("too high")
+    else:
+        print("too low")
 print(count)

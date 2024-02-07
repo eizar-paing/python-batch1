@@ -19,9 +19,32 @@ for i in range(1, 4):
     print(student[test + str(i)])
 # print(student.get(test))
 
+# print(student['subject1'])
+# print(student['subject2'])
+# print(student['subject3'])
+
 # Add key value
 student['phone'] = '012-344-567'
 print(student)
 
 print(student.keys())
 print(student.items())
+
+
+person = student.copy()
+
+person['city'] = 'Yangon'
+
+# Remove item
+del student['subject1']
+student.pop('phone')
+
+# Clear
+student.clear()
+print(student)
+
+del student
+
+print(person)
+print(len(person))
+# print(student)

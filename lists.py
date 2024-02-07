@@ -1,6 +1,5 @@
 numbers = [1, 2, 3, 4, 5]
 fruits = ["Apple", "Orange", "Grape"]
-
 print(fruits[1])
 print(numbers[3])
 
@@ -36,3 +35,5 @@ for i in nested_numbers:
     for j in i:
         print(f'{j} ', end='')
     print()
+print(nested_numbers[0][1])
+print(nested_numbers[3][0])

@@ -112,11 +112,16 @@ for i in range(5):  # outer loop
 # 4
 # 5
 
-rows = 6
-for i in range(1, rows + 1):
-    for j in range(i):
-        print("*", end='')
-    print()
+
+def pyramid_star(row_num):
+    for i in range(1, row_num + 1):
+        for j in range(i):
+            print("*", end='')
+        print()
+
+
+rows = int(input("Enter row number: "))
+pyramid_star(rows)
 
 
 numbers = [1, 2, 3, 4, 5, 6]
