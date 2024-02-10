@@ -1,5 +1,6 @@
 numbers = [1, 2, 3, 4, 5]
 fruits = ["Apple", "Orange", "Grape"]
+all = ["hello", 2, True, 2.5]
 print(fruits[1])
 print(numbers[3])
 
