@@ -8,6 +8,29 @@ student = {
     'subject3': 'Science'
 }
 
+student_list = [{
+    'first_name': 'Aye',
+    'last_name': 'Moe',
+    'age': 12,
+    'subject1': 'English',
+    'subject2': 'Math',
+    'subject3': 'Science'
+}, {
+    'first_name': 'Aye',
+    'last_name': 'Moe',
+    'age': 12,
+    'subject1': 'English',
+    'subject2': 'Math',
+    'subject3': 'Science'
+}, {
+    'first_name': 'Aye',
+    'last_name': 'Moe',
+    'age': 12,
+    'subject1': 'English',
+    'subject2': 'Math',
+    'subject3': 'Science'
+}]
+
 # Get value by key
 print(student['first_name'])
 print(student.get('age'))
