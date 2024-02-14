@@ -26,5 +26,3 @@ for i in range(1, 10):
         # ...
 # Outer ==> 9
     # inner ==> 999999999
-
-
