@@ -1,32 +1,31 @@
-# # exercises to function
-# # for nested loop
-# def nested_loop(row_num): # can't put user_row here, u will have to give new name
-#     for i in range(1, row_num + 1):
-#         for j in range(i):
-#             print(i, end = "")
-#         print()
+# exercises to function
+# for nested loop
+def nested_loop(row_num): # can't put user_row here, u will have to give new name
+    for i in range(1, row_num + 1):
+        for j in range(i):
+            print(i, end = "")
+        print()
 
-# user_row = int(input("Enter your row number: "))
-# nested_loop(user_row)
+user_row = int(input("Enter your row number: "))
+nested_loop(user_row)
 
+# *  *  *  *
+# *        *
+# *        *
+# *  *  *  *
 
-# # *  *  *  *
-# # *        *
-# # *        *
-# # *  *  *  *
+# for square_star
+def square_star(a_b):
+    for i in range(a_b):
+        for j in range(a_b):
+            if i == 0 or i == a_b - 1 or j == 0 or j == a_b - 1:
+                print("*", end = " ")
+            else:
+                print(" ", end = " ")
+        print()
 
-# # for square_star
-# def square_star(a_b):
-#     for i in range(a_b):
-#         for j in range(a_b):
-#             if i == 0 or i == a_b - 1 or j == 0 or j == a_b - 1:
-#                 print("*", end = " ")
-#             else:
-#                 print(" ", end = " ")
-#         print()
-
-# user_input = int(input("Enter your row number: "))
-# square_star(user_input)
+user_input = int(input("Enter your row number: "))
+square_star(user_input)
 
 # Trace
 # user will input her value in user_input
