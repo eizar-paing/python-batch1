@@ -9,7 +9,7 @@ class Person:
   def new_method(self, num):
   	print("Name ", self.name, " and Age ", self.age, " Num is ", num)
     
-  def myfun(self):
+def myfun(self):
     print("self ", self)
   
 
