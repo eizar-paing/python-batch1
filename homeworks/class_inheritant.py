@@ -26,12 +26,16 @@ class Vehicle():
     def __str__(self):
         f"{self.name}, {self.color}, {self.max_speed}"
 
+    def description(self):
+        print("This is a vehicle")
+
     def printAll(self):
         print(f"Name: {self.name}, Color: {self.color}, Max_speed: {self.max_speed}")
         
 class Car(Vehicle):
     def __init__(self, name, color, max_speed, price):
         super().__init__(name, color, max_speed)
+        Vehicle.__init__(self, name, color, max_speed)
         self.price = price
     
     def __str__(self):
@@ -62,8 +66,15 @@ bike_class = Bike("Cannondale", "red", 45.06)
 bike_class.description()
 bike_class.printAll()
 
+bike_class2 = Bike("Cannondale2", "red", 45.06)
+bike_class2.description()
+
 print()
 print(car_class)
+
+# len(string)
+# len(tuple)
+# len(dictionary)
 
 
 
