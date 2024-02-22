@@ -16,8 +16,9 @@ print(next(mytuple_it))
 
 
 class MyNumbers: #class
-  def __init__(self) -> None:
+  def __init__(self, num):
     print("do init function !!!")
+
 
   def __iter__(self):
     self.a = 1
@@ -33,7 +34,7 @@ class MyNumbers: #class
       raise StopIteration
 
 
-mynum = MyNumbers() #object
+mynum = MyNumbers() #object # call __init__(self) method
 mynum_it = iter(mynum) # (1)
 
 for i in mynum_it:

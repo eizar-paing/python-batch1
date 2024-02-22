@@ -1,10 +1,6 @@
 import cust_module
 import exercises
-from datetime import date
 
-today = date.today()
-
-print(today)
 
 row_in = int(input("Enter row number : "))
 cust_module.pyramid_star(row_in)
