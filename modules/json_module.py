@@ -51,10 +51,10 @@ print(batters)
 batter = batters["batter"]
 
 print(batter)
-first_obj = batter[0]
-print(first_obj)
-print(first_obj["id"])
-print(first_obj["type"])
+# first_obj = batter[0]
+# print(first_obj)
+# print(first_obj["id"])
+# print(first_obj["type"])
 
 # [
 # 					{ "id": "1001", "type": "Regular" },
