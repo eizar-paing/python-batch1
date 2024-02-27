@@ -1,3 +1,4 @@
+import json
 json_sample = {
 	"items":
 		{
@@ -30,8 +31,6 @@ json_sample = {
 							]
 					},
 
-					...
-
 				]
 		}
 }
@@ -39,10 +38,19 @@ json_sample = {
 items = json_sample["items"]
 item = items["item"]
 all_item = item[0]
+topping = all_item["topping"]
+batters = all_item["batters"]
+batter_list = batters["batter"]
+
+for batter_item in batter_list:
+	print(batter_item["id"] + " & " + batter_item["type"])
+
+# print(topping)
 # print(all_item)
 
-# for i in all_item:
-#     print(i["topping"])
+# for i in item:
+# 	topping_list = i["topping"]
+# 	print(topping_list[0]["id"])
 
     
         
@@ -51,7 +59,17 @@ all_item = item[0]
 
 # for i in json_4:
      
+x = {
+  "name": "John",
+  "age": 30,
+  "married": True,
+  "divorced": False,
+  "children": ("Ann","Billy"),
+  "pets": None,
+  "cars": [
+    {"model": "BMW 230", "mpg": 27.5},
+    {"model": "Ford Edge", "mpg": 24.1}
+  ]
+}
 
-
-    
-
+print(json.dumps(x, indent=4, sort_keys=True, separators=(".", "=")))
