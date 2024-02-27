@@ -36,15 +36,21 @@ json_sample = {
 		}
 }
 
-# json_1 = json_sample["items"]
+items = json_sample["items"]
+item = items["item"]
+all_item = item[0]
+# print(all_item)
 
-# json_2 = json_1["item"]
+# for i in all_item:
+#     print(i["topping"])
 
-# josn3 = json_2["topping"]
-# print(json_2)
-
-# for i in json3():
     
+        
+# json_4 = json_3["topping"]
+# print(json_4)
+
+# for i in json_4:
+     
 
 
     
