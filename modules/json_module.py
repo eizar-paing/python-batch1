@@ -66,4 +66,9 @@ for item in batter:
   print(item["id"] + ", " + item["type"]) # {'id': '1001', 'type': 'Regular'}
 
 
+topping = json_sample["topping"]
+print(topping)
+
+for i in topping:
+  print(i["id"], ",", i["type"])
 
