@@ -83,3 +83,11 @@ if x is not y:  # 2 is not 2 => false
 # true or true => true
 # true or false => true
 # false or false => false
+
+gender = 'male'
+
+while gender != 'female': # male != female // true # female != female // false
+    gender = input('enter gender:') # female
+    print("He is a student")
+
+print('She is a student')
