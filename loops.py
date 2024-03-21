@@ -51,6 +51,35 @@ for i in range(2, 10, 2):  # 2, 4, 6, 8
 # count = 3 + 1
 # while 4<4 => quit loop
 
+# for(let i=0; i<10; i++ ) {
+
+# }
+
+# for i in range(10):
+#     pass
+
+number = int(input("Enter number: "))
+# check the number is 0
+i = 1
+while i<=number: 
+    if i%2 == 0:
+        print(i, "is even")
+    else:
+        print(i, "is odd")
+    i += 1
+
+# need to solve
+i = 1
+while i>number:     # 1 > 5 (user input)
+    if i%2 == 0:
+        print(i, "is even")
+    else:
+        print(i, "is odd")
+    i -= 1
+
+
+
+
 
 # count = 0
 # while count < 10:
