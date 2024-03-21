@@ -5,45 +5,45 @@
 # Eg. print(n, 'is a even number') or print(n, 'is a even number')
 #  5.   Check how many times a given number can be divided by 3 before it is less than or equal to 10.
 
-# # for 1
-# print ("No.1")
-# username = "Susan"
-# password = "564789sv"
+# for 1
+print ("No.1")
+username = "Susan"
+password = "564789sv"
 
-# while True:
-#     user_username = input("Enter your username: ")
-#     user_password = input("Enter your password: ")
+while True:
+    user_username = input("Enter your username: ")
+    user_password = input("Enter your password: ")
 
-#     if user_username == username and user_password == password:
-#         print("Welcome user!")
-#         break
-#     else: 
-#         print("Fail")
+    if user_username == username and user_password == password:
+        print("Welcome user!")
+        break
+    else: 
+        print("Fail")
 
-# # for 2
-# print("No.2")
+# for 2
+print("No.2")
 
-# while True:
-#     user_num = int(input("Enter your number: "))
+while True:
+    user_num = int(input("Enter your number: "))
 
-#     if user_num > 100 and user_num < 500:
-#         print("Well done!")
-#         break
-#     else:
-#         print("Try again")
+    if user_num > 100 and user_num < 500:
+        print("Well done!")
+        break
+    else:
+        print("Try again")
 
-# # for 3
-# print("No.3")
+# for 3
+print("No.3")
 
-# character = "Susan2Aung0"
-# total = 0
+character = "Susan2Aung0"
+total = 0
 
-# while total < len(character): # 0 < 11:
-#     i = character[total] # i = S
-#     if i.isdigit(): # i is dight?, No
-#         break 
-#     print(i) # S
-#     total += 1 # 1 = 0 + 1
+while total < len(character): # 0 < 11:
+    i = character[total] # i = S
+    if i.isdigit(): # i is dight?, No
+        break 
+    print(i) # S
+    total += 1 # 1 = 0 + 1
 
 # for 4
 print("No.4")
