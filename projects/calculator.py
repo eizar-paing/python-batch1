@@ -8,6 +8,14 @@ def getDigit(digit):
 def clear():
   result_label.config(text='')
 
+def removeDigit():
+  current = int(result_label['text'])
+  new = int(current / 10)
+  if new == 0:
+    result_label.config(text='')
+  else:
+    result_label.config(text=new)
+
 def getOperator(op):
   global number1, operator
   number1 = int(result_label['text'])
@@ -31,7 +39,7 @@ def getResult():
 
 root = Tk()
 root.title("Calculator")
-root.geometry('350x400')
+root.geometry('500x400')
 root.resizable(1, 0)
 root.configure(background='black')
 
@@ -39,7 +47,10 @@ result_label = Label(root, text='', bg='black', fg='white')
 result_label.grid(row=0, column=0, columnspan=4, pady=(40, 20))
 result_label.config(font=('Verdana', 32, 'bold'))
 
-btn7 = Button(root, text='7', width=5, height=2, command= lambda :getDigit(7))
+# command = getDigit(7)  #None
+# command = lambda : getDigit(7) #getDigit(7)
+
+btn7 = Button(root, text='7', width=5, height=2, command= getDigit(7))
 btn7.grid(row=1, column=0)
 btn7.config(font=('Verdana', 14))
 
@@ -103,5 +114,9 @@ btn_equal.config(font=('Verdana', 14))
 btn_div = Button(root, text='/', width=5, height=2, command=lambda :getOperator('/'))
 btn_div.grid(row=4, column=3)
 btn_div.config(font=('Verdana', 14))
+
+btn_remove = Button(root, text='AC', width=5, height=2, command=lambda :removeDigit())
+btn_remove.grid(row=5, column=1)
+btn_remove.config(font=('Verdana', 14))
 
 root.mainloop()

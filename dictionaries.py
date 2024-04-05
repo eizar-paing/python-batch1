@@ -8,6 +8,9 @@ student = {
     'subject3': 'Science'
 }
 
+for key in student.keys():
+    print(key, " : ", student[key])
+
 student_list = [{
     'first_name': 'Aye',
     'last_name': 'Moe',
@@ -71,3 +74,4 @@ del student
 print(person)
 print(len(person))
 # print(student)
+

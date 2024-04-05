@@ -59,3 +59,7 @@ def add2(a):
   return a + 2
 
 result = multi10(add2(double(10)))
+
+func = double(5) # 10
+func = lambda : double(5) #double(5)
+print(func())
