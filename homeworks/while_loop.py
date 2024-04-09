@@ -48,8 +48,33 @@ while total < len(character): # 0 < 11:
 # for 4
 print("No.4")
 
-user_number = int(input("Enter ypur number: "))
-pass
+start_num = 1
+user_number = int(input("Enter a number: "))
+
+while start_num <= user_number:
+    if start_num % 2 == 0:
+        print(f"{start_num} is an even nunber")
+    else:
+        print(f"{start_num} is an odd number")
+
+    start_num += 1
+
+# for 5
+print("No.5")
+
+usernum = int(input("Enter a number: "))
+total = 0
+
+while usernum > 10: # will work if the usernum is larger than 10
+    usernum = usernum / 3 
+    total += 1
+   
+print(f"The total is {total}")
+
+
+
+
+
 
     
 
