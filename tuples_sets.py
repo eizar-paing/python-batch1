@@ -10,12 +10,12 @@ fruits = ('Apples', 'Oranges', 'Grapes', 'Apples')
 # fruits2 = tuple(('Apples', 'Oranges', 'Grapes'))
 
 # Single value needs trailing comma
-fruits2 = ('Apples',)
+fruits2 = ('Apples')
 
 # Get value
 print(fruits[1])
-print(fruits2)
-print(fruits)
+print(type(fruits2))
+print(type(fruits))
 
 # Can't change value
 # fruits[0] = 'Pears'
@@ -57,3 +57,11 @@ print(fruits_set)
 del fruits_set
 
 # print(fruits_set)
+
+tup1 = ("Rohan", "Physics", 21, 69.75)
+tup2 = (1, 2, 3, 4, 5)
+tup3 = ("a", "b", "c", "d")
+tup4 = (25.50, True, -55, 1+2j)
+tup5 = (1, 2, 3)
+
+print(max(tup2, tup5))

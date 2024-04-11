@@ -52,7 +52,7 @@ print(triple_fun(10))
 def double(a):
   return a * 2
 
-def multi10(a, b):
+def multi10(a):
   return a * 10
 
 def add2(a):
@@ -61,5 +61,9 @@ def add2(a):
 result = multi10(add2(double(10)))
 
 func = double(5) # 10
-func = lambda : double(5) #double(5)
-print(func())
+
+func = lambda x : double(x) #double(5)
+print("lambda result 1 : ", func(3))
+
+result = lambda x : x + 1
+print("lambda result 2 : ", result(3))

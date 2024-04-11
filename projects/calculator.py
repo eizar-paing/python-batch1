@@ -40,29 +40,29 @@ def getResult():
 root = Tk()
 root.title("Calculator")
 root.geometry('500x400')
-root.resizable(1, 0)
+root.resizable(1, 1)
 root.configure(background='black')
 
 result_label = Label(root, text='', bg='black', fg='white')
-result_label.grid(row=0, column=0, columnspan=4, pady=(40, 20))
+result_label.grid(row=0, column=0, columnspan=100, pady=(100, 100)) #
 result_label.config(font=('Verdana', 32, 'bold'))
 
 # command = getDigit(7)  #None
 # command = lambda : getDigit(7) #getDigit(7)
 
-btn7 = Button(root, text='7', width=5, height=2, command= getDigit(7))
+btn7 = Button(root, text='7', width=10, height=2, command= lambda :getDigit(7))
 btn7.grid(row=1, column=0)
 btn7.config(font=('Verdana', 14))
 
-btn8 = Button(root, text='8', width=5, height=2, command= lambda :getDigit(8))
+btn8 = Button(root, text='8', width=10, height=2, command= lambda :getDigit(8))
 btn8.grid(row=1, column=1)
 btn8.config(font=('Verdana', 14))
 
-btn9 = Button(root, text='9', width=5, height=2, command=lambda :getDigit(9))
+btn9 = Button(root, text='9', width=10, height=2, command=lambda :getDigit(9))
 btn9.grid(row=1, column=2)
 btn9.config(font=('Verdana', 14))
 
-btn_add = Button(root, text='+', width=5, height=2, command=lambda :getOperator('+'))
+btn_add = Button(root, text='+', width=10, height=2, command=lambda :getOperator('+'))
 btn_add.grid(row=1, column=3)
 btn_add.config(font=('Verdana', 14))
 

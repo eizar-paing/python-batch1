@@ -59,4 +59,5 @@ while True:
   elif choice == 5:
     delete_contact()
   else:
+    print("Thank you for using the contact book")
     break
