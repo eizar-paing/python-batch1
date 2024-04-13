@@ -1,3 +1,5 @@
+#Python program to create a new dictionary by extracting the keys from a given dictionary.
+
 d1 = {"one":11, "two":22, "three":33, "four":44, "five":55}
 keys = ['two', 'three']
 
