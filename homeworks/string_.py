@@ -24,11 +24,19 @@ remove_duplicate = "".join(new_str)
 print(remove_duplicate)
 
 # No.3
+aa = "Cause I'm in a field of dandelions Wishing on every one that you'd be mine, mine"
+result = {}
+
+for i in aa:
+    if i in result.keys():
+        result[i] = result[i] + 1 # cuz in the result[i], there is the 1 
+    else:
+        result[i] = 1
+
+print(result)
+
+
 new_string = "We # were * too 1 close 2 to 3 the stars I 5 never knew 9 somebody 13 like you, somebody !!"
-
-
-
-
 # No.4
 count = 0
 
