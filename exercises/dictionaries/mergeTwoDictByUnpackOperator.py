@@ -24,7 +24,7 @@ print(mySum(1, 2)) # (1, 2)
 def getSum(a, b, c):
   return a + b + c
 
-def getUpdate(*args):  #Packing
+def getUpdate(*args):  #Packing # (2, 3, 4)
   args = list(args) # [2, 3, 4]
 
   args[0] = 1

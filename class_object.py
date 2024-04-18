@@ -25,11 +25,17 @@ class Student:
 student1 = Student("Kyaw Kyaw", "kyaw@eg.com", "address one", "123 444 666", 30, 50, 60)
 student2 = Student("Mg Mg", "mgmg@eg.com", "address two", "222 444 888", 50, 60, 70)
 
+student_list = [student1, student2]
+
 print(student1.phno)
 print(student2.twitter)
 
 print(student1)
+setattr(student2, "name", "MM")
 
 student1.capName()
 student1.getResult()
 student2.getResult()
+
+print(getattr(student2, "email"))
+print(hasattr(student2, "name")) # True
