@@ -7,13 +7,16 @@ sorted_dict1 = sorted(dict1, key=fun_dict1)
 print(sorted_dict1)
 
 # Python program to extract dictionary with each key having non-numeric value from a given dictionary.
-dict2 = {"one": "three", "two": 5, "three": 2, "four": "one", "five": 4}
-new_dict2 = {}
+def getNonNumeric_Value(dict_val):
+    non_numeric_dict = {}
+    for key, val in dict_val.items():
+        if not isinstance(val, (int, float)):
+            non_numeric_dict[key] = val
+    return non_numeric_dict
 
-for k,v in dict2.items():
-    if not v.isnumeric():
-        new_dict2[k] = v  
-print(new_dict2)
+my_dict = {"one": "three", "two": 5, "three": 2, "four": "one", "five": 4}
+result_dict = getNonNumeric_Value(my_dict)
+print(result_dict)
 
 
 # Python program to build a dictionary from list of two item (k,v) tuples.
