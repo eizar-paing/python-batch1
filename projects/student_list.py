@@ -9,7 +9,7 @@ class Student:
     other.mark3 = mark3
     
   def __str__(self) -> str:
-    return f"My name is {self.name} and My email is {self.email}."
+    return f"{self.name}, {self.mark1}, {self.mark2}, {self.mark3} and id {self.student_id}."
 
 def add_student():
   name = input("Enter the student name : ")
@@ -22,7 +22,7 @@ def add_student():
 
 def search_student():
   if len(student_list) > 0:
-    id = input("Enter the student id : ")
+    id = int(input("Enter the student id : "))
     for student in student_list:
       if student.student_id == id:
         print("ID : ", student.student_id, ", Name : ", student.name, ", Mark1 : ", student.mark1, ", Mark2 : ", student.mark2, ", Mark3 : ", student.mark3)
@@ -38,23 +38,39 @@ def display_student():
   else:
     print("No student in student list!")
 
+# Susan
 def edit_student():
   if len(student_list) > 0:
-    id = input("Enter the student id : ")
-    attribute = input("Enter the attribute name to edit (name, mark1, mark2, mark3) : ")
-    value = input("Enter the new value : ")
-    #To trace
+    user_id = int(input("Enter the student id: "))
     for student in student_list:
-      if student.student_id == id:
+      if student.student_id == user_id:
+        attribute = input("Enter the attribute name to edit (name, mark1, mark2, mark3) : ")
+        value = input("Enter the new value : ")
         setattr(student, attribute, value)
         print("Upadated new student successfully!")
       else:
-        print("No student with id ", id)
+          print("No student with id ", user_id)
   else:
-    print("No student in student list!")
+    print("No students in the list")
+# Susan
+
+# def edit_student():
+#   if len(student_list) > 0:
+#     id = input("Enter the student id : ")
+#     attribute = input("Enter the attribute name to edit (name, mark1, mark2, mark3) : ")
+#     value = input("Enter the new value : ")
+#     #To trace
+#     for student in student_list:
+#       if student.student_id == id:
+#         setattr(student, attribute, value)
+#         print("Upadated new student successfully!")
+#       else:
+#         print("No student with id ", id)
+#   else:
+#     print("No student in student list!")
 
 def delete_student():
-  id = input("Enter the student id : ")
+  id = int(input("Enter the student id : "))
   for student in student_list:
     if student.student_id == id:
       student_list.remove(student)
@@ -75,3 +91,10 @@ while True:
   else:
     print("Thank you for using the student list")
     break
+
+
+# student = Student("susan", 100, 92, 78)
+# print(student)
+
+# student1 = Student("BoBo", 100, 92, 78)
+# print(student1)
