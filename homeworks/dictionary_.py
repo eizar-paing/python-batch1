@@ -18,8 +18,24 @@ my_dict = {"one": "three", "two": 5, "three": 2, "four": "one", "five": 4}
 result_dict = getNonNumeric_Value(my_dict)
 print(result_dict)
 
-
 # Python program to build a dictionary from list of two item (k,v) tuples.
+list_tuple = [("a", 1), ("b", 2), ("c", 3), ("d", 4)]
+dict3 = {}
+
+for i in list_tuple:
+    key = i[0]
+    val = i[1]
+    dict3[key] = val
+
+print(dict3)
 
 # Python program to merge two dictionary objects, using unpack operator.
+dict4 = {"one": 3, "two": 5, "three": 2, "four": 1, "five": 4}
+dict5 = {"six": "seven", "eight": 5, "nine": 2, "ten": "one", "five": 4}
 
+def mergefun(d4, d5):
+    result = {**d4, **d5}
+    return result
+
+merge_dict = mergefun(dict4, dict5)
+print(merge_dict)
