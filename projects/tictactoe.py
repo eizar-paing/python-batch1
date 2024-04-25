@@ -10,17 +10,22 @@ p1_turn = True
 flag = 0
 
 def btn_click(btn):
-  global p1_turn, flag
-  if btn['text'] =='' and p1_turn:
-    btn['text'] = 'X'
-    p1_turn = False
-    checkwinner()
-  elif btn['text'] == '' and not p1_turn:
-    btn['text'] ='O'
-    p1_turn = True
-    checkwinner()
+  if p1.get() and p2.get():
+    global p1_turn, flag
+    if btn['text'] =='' and p1_turn:
+      btn['text'] = 'X'
+      p1_turn = False
+      flag += 1
+      checkwinner()
+    elif btn['text'] == '' and not p1_turn:
+      btn['text'] ='O'
+      p1_turn = True
+      flag += 1
+      checkwinner()
+    else:
+      mb.showinfo("Tic Tac Toe", "Already filled!")
   else:
-    mb.showinfo("Tic Tac Toe", "Already filled!")
+    mb.showinfo("Tic Tac Toe", "Enter player1 and player2 first!")
 
 def checkwinner():
   if(btn1['text'] == 'X' and btn2['text'] == 'X' and btn3['text'] == 'X' or
@@ -43,6 +48,9 @@ def checkwinner():
   btn1['text'] == 'O' and btn5['text'] == 'O' and btn9['text'] == 'O' or
   btn3['text'] == 'O' and btn5['text'] == 'O' and btn7['text'] == 'O'):
     mb.showinfo("Tic Tac Toe", p2.get() + " wins!")
+    disabled_btn()
+  elif flag == 9:
+    mb.showinfo("Tic Tac Toe", "It is a Tie!")
     disabled_btn()
     
 def disabled_btn():
@@ -72,7 +80,6 @@ def restart_btn():
   btn7.config(state=NORMAL)
   btn8.config(state=NORMAL)
   btn9.config(state=NORMAL)
-
 
 
 label1 = Label(root, text='Player1', bg='white', fg='black')

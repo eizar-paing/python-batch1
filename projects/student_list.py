@@ -2,7 +2,8 @@ student_list = []
 
 class Student:
   def __init__(other, name, mark1, mark2, mark3):
-    other.student_id = len(student_list) + 1
+    # other.student_id = len(student_list) + 1
+    other.student_id = student_list[len(student_list)-1].id + 1
     other.name = name
     other.mark1 = mark1
     other.mark2 = mark2
