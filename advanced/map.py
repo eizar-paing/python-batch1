@@ -20,3 +20,22 @@ even_odd_list = list(map(checkEvenOdd, items))
 print(even_odd_list)
 
 
+def multiply(x):
+  return (x*x)
+
+def add(x):
+  return (x+x)
+
+funs = [multiply, add]
+for i in range(5):
+  value = list(map(lambda x: x(i), funs)) # [multiply(0),add(0)] => [0, 0]
+  print(value)
+
+
+# [0, 1, 2, 3, 4] => [0, 0]
+                # => [1, 2]
+                # => [4, 4]
+
+
+
+
