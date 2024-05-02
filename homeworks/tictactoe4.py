@@ -7,7 +7,7 @@ root.title("Tic Tac Toe")
 p1 = StringVar()
 p2 = StringVar()
 p1_turn = True
-flage = 0
+flag = 0
 
 def when_click(btn):
     if p1.get() and p2.get():
@@ -16,11 +16,15 @@ def when_click(btn):
         if btn["text"] == " " and p1_turn:
             btn["text"] = "X"
             p1_turn = False
+            flag += 1
+            check_winner()
 
         elif btn["text"] == " " and not p1_turn:
             btn["text"] = "O"
             p1_turn = True
-        
+            flag += 1
+            check_winner()
+            
         else:
             mb.showinfo("Tic Tac Toe 4", "Already Filled!")
     else:
@@ -36,26 +40,49 @@ def check_winner():
     button_1["text"] == "X" and button_5["text"] == "X" and button_9["text"] == "X" and button_13["text"] == "X" or
     button_2["text"] == "X" and button_6["text"] == "X" and button_10["text"] == "X" and button_14["text"] == "X" or
     button_3["text"] == "X" and button_7["text"] == "X" and button_11["text"] == "X" and button_15["text"] == "X" or
-    button_4["text"] == "X" and button_8["text"] == "X" and button_12["text"] == "X" and button_16["text"] == "X" or):
-        mb.showinfo("Tic Tac Toe 4", p1.get() + "wins")
+    button_4["text"] == "X" and button_8["text"] == "X" and button_12["text"] == "X" and button_16["text"] == "X"):
+        mb.showinfo("Tic Tac Toe 4", p1.get() + " "+ "wins")
+        disabled_button()
     
-    elif(button_1["text"] == "X" and button_2["text"] == "X" and button_3["text"] == "X" and button_4["text"] == "X" or
-    button_5["text"] == "X" and button_6["text"] == "X" and button_7["text"] == "X" and button_8["text"] == "X" or
-    button_9["text"] == "X" and button_10["text"] == "X" and button_11["text"] == "X" and button_12["text"] == "X" or
-    button_13["text"] == "X" and button_14["text"] == "X" and button_15["text"] == "X" and button_16["text"] == "X" or
-    button_1["text"] == "X" and button_6["text"] == "X" and button_11["text"] == "X" and button_16["text"] == "X" or
-    button_4["text"] == "X" and button_7["text"] == "X" and button_10["text"] == "X" and button_13["text"] == "X" or
-    button_1["text"] == "X" and button_5["text"] == "X" and button_9["text"] == "X" and button_13["text"] == "X" or
-    button_2["text"] == "X" and button_6["text"] == "X" and button_10["text"] == "X" and button_14["text"] == "X" or
-    button_3["text"] == "X" and button_7["text"] == "X" and button_11["text"] == "X" and button_15["text"] == "X" or
-    button_4["text"] == "X" and button_8["text"] == "X" and button_12["text"] == "X" and button_16["text"] == "X" or):
-        mb.showinfo("Tic Tac Toe 4", p2.get() + "wins")
+    elif(button_1["text"] == "O" and button_2["text"] == "O" and button_3["text"] == "O" and button_4["text"] == "O" or
+    button_5["text"] == "O" and button_6["text"] == "O" and button_7["text"] == "O" and button_8["text"] == "O" or
+    button_9["text"] == "O" and button_10["text"] == "O" and button_11["text"] == "O" and button_12["text"] == "O" or
+    button_13["text"] == "O" and button_14["text"] == "O" and button_15["text"] == "O" and button_16["text"] == "O" or
+    button_1["text"] == "O" and button_6["text"] == "O" and button_11["text"] == "O" and button_16["text"] == "O" or
+    button_4["text"] == "O" and button_7["text"] == "O" and button_10["text"] == "O" and button_13["text"] == "O" or
+    button_1["text"] == "O" and button_5["text"] == "O" and button_9["text"] == "O" and button_13["text"] == "O" or
+    button_2["text"] == "O" and button_6["text"] == "O" and button_10["text"] == "O" and button_14["text"] == "O" or
+    button_3["text"] == "O" and button_7["text"] == "O" and button_11["text"] == "O" and button_15["text"] == "O" or
+    button_4["text"] == "O" and button_8["text"] == "O" and button_12["text"] == "O" and button_16["text"] == "O"):
+        mb.showinfo("Tic Tac Toe 4", p2.get() + " " + "wins")
+        disabled_button()
     
+    elif flag == 16:
+        mb.showinfo("Tic Tac Toe 4", "It is Tie!")
+        disabled_button()
+
+def disabled_button():
+    button_1.config(state=DISABLED)
+    button_2.config(state=DISABLED)
+    button_3.config(state=DISABLED)
+    button_4.config(state=DISABLED)
+    button_5.config(state=DISABLED)
+    button_6.config(state=DISABLED)
+    button_7.config(state=DISABLED)
+    button_8.config(state=DISABLED)
+    button_9.config(state=DISABLED)
+    button_10.config(state=DISABLED)
+    button_11.config(state=DISABLED)
+    button_12.config(state=DISABLED)
+    button_13.config(state=DISABLED)
+    button_14.config(state=DISABLED)
+    button_15.config(state=DISABLED)
+    button_16.config(state=DISABLED)
 
 def restart_button():
-    global p1_turn, flage
-    p1.set(" ")
-    p2.set(" ")
+    global p1_turn, flag
+    p1.set("")
+    p2.set("")
     p1_turn = True
     flag = 0
     button_1["text"] =  button_2["text"] =  button_3["text"] =  button_4["text"] =  button_5["text"] =  button_6["text"] =  button_7["text"] =  button_8["text"] =  button_9["text"] =  button_10["text"] =  button_11["text"] =  button_12["text"] =  button_13["text"] =  button_14["text"] =  button_15["text"] =  button_16["text"] = " "
@@ -75,8 +102,6 @@ def restart_button():
     button_14.config(state=NORMAL)
     button_15.config(state=NORMAL)
     button_16.config(state=NORMAL)
-
-
 
 
 label_1 = Label(root, text="Player1", bg="grey", fg="black")
