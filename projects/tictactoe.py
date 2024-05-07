@@ -84,16 +84,16 @@ def restart_btn():
 
 label1 = Label(root, text='Player1', bg='white', fg='black')
 label1.grid(row=0, column=0)
-player1 = Entry(root, textvariable=p1, width=10, bd=2)
-player1.grid(row=0, column=1)
+player1 = Entry(root, textvariable=p1, width=20, bd=2)
+player1.grid(row=0, column=1, columnspan=2)
 
 label2 = Label(root, text='Player2', bg='white', fg='black')
 label2.grid(row=1, column=0)
-player2 = Entry(root, textvariable=p2, width=10, bd=2)
-player2.grid(row=1, column=1)
+player2 = Entry(root, textvariable=p2, width=20, bd=2)
+player2.grid(row=1, column=1, columnspan=2)
 
 restart = Button(root, text='Restart', fg='black', command=lambda : restart_btn())
-restart.grid(row=1, column=2)
+restart.grid(row=1, column=3)
 
 btn1 = Button(root, text='', fg='black', width=8, height=4, command= lambda : btn_click(btn1))
 btn1.grid(row=2, column=0)
@@ -101,6 +101,9 @@ btn2 = Button(root, text='', fg='black', width=8, height=4, command= lambda : bt
 btn2.grid(row=2, column=1)
 btn3 = Button(root, text='', fg='black', width=8, height=4, command= lambda : btn_click(btn3))
 btn3.grid(row=2, column=2)
+btn3 = Button(root, text='', fg='black', width=8, height=4, command= lambda : btn_click(btn3))
+btn3.grid(row=2, column=3)
+
 
 btn4 = Button(root, text='', fg='black', width=8, height=4, command= lambda : btn_click(btn4))
 btn4.grid(row=3, column=0)
