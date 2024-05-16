@@ -68,11 +68,11 @@ def merge(arr, l, m, r): #merge(arr, 0, 0, 1) L = arr[0] => [12] , R = arr[1] =>
 # l = 0 , r = 2 => 
 
 def mergeSort(arr, l, r): # l = 0, r = 5
-	if l < r:
+	if l < r: # 0 < 5
 
 		# Same as (l+r)//2, but avoids overflow for
 		# large l and h
-		m = l+(r-l)//2 # (l + r) // 2
+		m = l+(r-l)//2 # (l + r) // 2, m = 2
 
 		# Sort first and second halves
 		mergeSort(arr, l, m)
