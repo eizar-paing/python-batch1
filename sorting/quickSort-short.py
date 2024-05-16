@@ -7,6 +7,12 @@ def quick_sort(arr):
         greater_than_pivot = [x for x in arr[1:] if x > pivot]
         return quick_sort(less_than_pivot) + [pivot] + quick_sort(greater_than_pivot)
 
+        # [1, 2, 1] [3] [6, 8, 10]
+        # [1] [1] [2] [3] [6] [8, 10]
+        # [1] [1] [2] [3] [6] [8] [10]
+        # [1, 1, 2, 3, 6, 8, 10]
+
+
 # Example usage:
 arr = [3, 6, 8, 10, 1, 2, 1]
 sorted_arr = quick_sort(arr)
