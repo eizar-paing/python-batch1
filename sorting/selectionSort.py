@@ -7,11 +7,11 @@ def selectionSort(array, size):
 			
 			# For sorting in descending order
 			# for minimum element in each loop
-			if array[i] < array[min_idx]:
-				min_idx = i
+			if array[i] < array[min_idx]: # arr[1] < arr[0], 2 < 7
+				min_idx = i # min_idx = 2
 
 		# Arranging min at the correct position
-		(array[s], array[min_idx]) = (array[min_idx], array[s])
+		(array[s], array[min_idx]) = (array[min_idx], array[s]) # arr[0] = arr[1], arr[1] = arr[0] [2, 7, 1, 6]
 
 # Driver code
 data = [ 7, 2, 1, 6 ]
